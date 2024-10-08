@@ -33,6 +33,11 @@ public class UserVO implements Serializable {
     private String userProfile;
 
     /**
+     * 编辑时间
+     */
+    private Date editTime;
+
+    /**
      * 用户角色：user/admin/ban
      */
     private String userRole;

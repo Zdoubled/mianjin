@@ -1,6 +1,6 @@
-package ${packageName}.model.dto.${dataKey};
+package com.doublez.mianjin.model.dto.questionBank;
 
-import ${packageName}.common.PageRequest;
+import com.doublez.mianjin.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -8,14 +8,14 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 查询${dataName}请求
+ * 查询题库请求
  *
- *
+ * 
  *
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ${upperDataKey}QueryRequest extends PageRequest implements Serializable {
+public class QuestionBankQueryRequest extends PageRequest implements Serializable {
 
     /**
      * id
@@ -38,19 +38,24 @@ public class ${upperDataKey}QueryRequest extends PageRequest implements Serializ
     private String title;
 
     /**
-     * 内容
+     * 描述
      */
-    private String content;
+    private String description;
 
     /**
-     * 标签列表
+     * 图片
      */
-    private List<String> tags;
+    private String picture;
 
     /**
      * 创建用户 id
      */
     private Long userId;
+
+    /**
+     * 是否查询题目列表
+     */
+    private Boolean needQueryQuestionList;
 
     private static final long serialVersionUID = 1L;
 }
